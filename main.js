@@ -38,3 +38,21 @@ function bai3(){
     let content = `Mảng của bạn là: [${array}]. Số nhỏ nhất trong mảng là: ${min}`;
     document.getElementById("noti3").innerHTML = content;
 }
+// Bài 4
+function themMang4() {
+    let number_1 = document.getElementById("Array4").value * 1;
+    array.push(number_1) // add number    
+    let content = `Mảng bạn đang có: [${array}].`
+    document.getElementById("noti4").innerHTML = content
+}
+function bai4(){
+    let min = array[0];
+      for (let i = 1; i < array.length; i++) {
+        if (array[i] < min && array[i]>=0) {
+            min = array[i];
+        }
+    }
+
+    let content = `Mảng của bạn là: [${array}]. Số Dương nhỏ nhất trong mảng là: ${min}`;
+    document.getElementById("noti4").innerHTML = content;
+}
