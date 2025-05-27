@@ -75,7 +75,34 @@ function bai5() {
     document.getElementById("noti5").innerHTML = content;
 }
 // Bài 6
+function themMang6() {
+    let number = document.getElementById("Array6").value * 1;
+    array.push(number);
+    document.getElementById("noti6").innerHTML = `📌 Mảng hiện tại: [${array}]`;
+}
 
+function doiCho() {
+    let viTri1 = document.getElementById("viTri1").value * 1;
+    let viTri2 = document.getElementById("viTri2").value * 1;
+
+    if (
+        viTri1 >= 0 && viTri1 < array.length &&
+        viTri2 >= 0 && viTri2 < array.length
+    ) {        
+        let mangCu = [...array];
+        // đổi chỗ
+        let temp = array[viTri1];
+        array[viTri1] = array[viTri2];
+        array[viTri2] = temp;        
+        document.getElementById("noti6").innerHTML =
+            `✅ Đã đổi chỗ vị trí ${viTri1} và ${viTri2}.<br>
+            📥 Mảng trước khi đổi: [${mangCu}]<br>
+            🔁 Mảng sau khi đổi: [${array}]`;
+    } else {
+        document.getElementById("noti6").innerHTML =
+            `❌ Vị trí nhập không hợp lệ! Mảng hiện có ${array.length} phần tử (bắt đầu từ 0).`;
+    }
+}
 
 // Bài 7
 function bai7() {
