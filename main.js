@@ -6,18 +6,18 @@ function themMang() {
     document.getElementById("noti12").innerHTML = content
 }
 // Bài 1 và Bài 2
-function soLonHon0() {
+function bai12() {
     let sum = 0;
-    let count = "";
+    let count = 0;
     for(let i = 0; i < array.length; i++){
         let number = array[i];
         if (number>=0){
-            sum+=number;
-            count += number + " "
+            sum += number;
+            count ++;
         }
     }
-    content = ` Mảng của bạn là:[${array}]. Trong đó, Tổng Số Dương là: ${sum}, Các giá trị Dương là ${count}`
-    document.getElementById("noti").innerHTML = content
+    content = ` Mảng của bạn là:[${array}]. Trong đó, Tổng Số Dương là: ${sum}, Có Tổng ${count} Số Dương`
+    document.getElementById("noti12").innerHTML = content
 }
 
 // Bài 3
@@ -74,6 +74,16 @@ function bai5() {
     let content = `Mảng của bạn là: [${array}]. Số chẵn cuối cùng trong mảng là: ${ketQua}`;
     document.getElementById("noti5").innerHTML = content;
 }
+// Bài 7
+function themMang7() {
+    let number_1 = document.getElementById("Array7").value * 1;
+    array.push(number_1);
+    let content = `Mảng bạn đang có: [${array}].`;    
+    array.sort((a, b) => a - b); // Sắp xếp mảng tăng dần
+    let content1 = `Mảng sau sắp xếp tăng dần: [${array}].`;
+    document.getElementById("noti7").innerHTML = `${content}, ${content1}`
+}
+
 
 // Bài 8
 function themMang8() {
@@ -100,4 +110,35 @@ function bai8() {
         }
     }
     document.getElementById("noti8").innerHTML = `Mảng của bạn là: [${array}]. Không có số nguyên tố nào: Kết Quả -1`;
+}
+
+// Bài 10
+function themMang10() {
+    let number_1 = document.getElementById("Array10").value * 1;
+    array.push(number_1);
+    let content = `Mảng bạn đang có: [${array}].`;
+    document.getElementById("noti10").innerHTML = content;
+}
+function bai10() {
+    let duong = 0;
+    let am = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+            duong++;
+        } else if (array[i] < 0) {
+            am++;
+        }
+    }
+
+    let content = '';
+    if (duong > am) {
+        content = `Số lượng số dương (${duong}) nhiều hơn số âm (${am}).`;
+    } else if (am > duong) {
+        content = `Số lượng số âm (${am}) nhiều hơn số dương (${duong}).`;
+    } else {
+        content = `Số lượng số dương (${duong}) và số âm (${am}) bằng nhau.`;
+    }
+
+    document.getElementById("noti10").innerHTML = content;
 }

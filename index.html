@@ -4,44 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Buổi 16</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <h1>Bài 1 và Bài 2: Tổng các số dương trong mảng/ Đếm có bao nhiêu số dương trong mảng.</h1>
-    <input type="number" placeholder="Nhập Số" id="Array">
-    <button onclick="themMang()">thêm Vào Mảng</button>
-    <button onclick="soLonHon0()">Submit</button>
-    <p id="noti12"></p>
-    <hr>
-    <h1>Bài 3: Tìm số nhỏ nhất trong mảng.</h1>
-    <input type="number" placeholder="Nhập Số" id="Array3">
-    <button onclick="themMang3()">Thêm Số Vào Mảng</button>
-    <button onclick="bai3()">Submit</button>
-    <p id="noti3"></p>
-    <hr>
-    <h1>Bài 4: Tìm số dương nhỏ nhất trong mảng.</h1>
-    <input type="number" placeholder="Nhập Số" id="Array4">
-    <button onclick="themMang4()">Thêm Số Vào Mảng</button>
-    <button onclick="bai4()">Submit</button>
-    <p id="noti4"></p>
-    <hr>
-    <h1>Bài 5: Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1.</h1>
-    <input type="number" placeholder="Nhập Số" id="Array5">
-    <button onclick="themMang5()">Thêm Số Vào Mảng</button>
-    <button onclick="bai5()">Submit</button>
-    <p id="noti5"></p>
-<hr>
-<h1>Bài 8: Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1..</h1>
-    <input type="number" placeholder="Nhập Số" id="Array8">
-    <button onclick="themMang8()">Thêm Số Vào Mảng</button>
-    <button onclick="bai8()">Submit</button>
-    <p id="noti8"></p>
-<hr>
+  <div class="max-w-3xl mx-auto p-6 space-y-10 font-sans text-gray-800">
 
-    <button>Tìm Số Nhỏ Nhất</button>
-    <button>Tìm Số Dương Nhỏ Nhất</button>
-    <button>Thêm Vào Mảng</button>
-    <button>Thêm Vào Mảng</button>
-    <p id="noti"></p>
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 1 và Bài 2: Tổng các số dương trong mảng / Đếm có bao nhiêu số dương trong mảng.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm vào mảng</button>
+      <button onclick="bai12()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti12" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 3: Tìm số nhỏ nhất trong mảng.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array3" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang3()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm số vào mảng</button>
+      <button onclick="bai3()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti3" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 4: Tìm số dương nhỏ nhất trong mảng.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array4" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang4()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm số vào mảng</button>
+      <button onclick="bai4()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti4" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 5: Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì trả về -1.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array5" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang5()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm số vào mảng</button>
+      <button onclick="bai5()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti5" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 7: Sắp xếp mảng theo thứ tự tăng dần.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array7" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang7()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm mảng và sắp xếp</button>
+    </div>
+    <p id="noti7" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 8: Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố thì trả về – 1.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array8" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang8()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm vào mảng</button>
+      <button onclick="bai8()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti8" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+  <hr class="border-gray-300" />
+
+  <section>
+    <h1 class="text-2xl font-bold mb-4">Bài 10: So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.</h1>
+    <div class="flex gap-3 mb-3">
+      <input type="number" id="Array10" placeholder="Nhập số" class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="themMang10()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Thêm vào mảng</button>
+      <button onclick="bai10()" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">Submit</button>
+    </div>
+    <p id="noti10" class="text-lg font-medium text-gray-700"></p>
+  </section>
+
+</div>
+
 
 
 
