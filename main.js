@@ -78,7 +78,7 @@ function bai5() {
 
 
 // Bài 7
-function themMang7() {
+function bai7() {
     let number_1 = document.getElementById("Array7").value * 1;
     array.push(number_1);
     let content = `Mảng bạn đang có: [${array}].`;    
