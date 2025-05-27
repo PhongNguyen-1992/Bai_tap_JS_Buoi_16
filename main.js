@@ -74,6 +74,9 @@ function bai5() {
     let content = `Mảng của bạn là: [${array}]. Số chẵn cuối cùng trong mảng là: ${ketQua}`;
     document.getElementById("noti5").innerHTML = content;
 }
+// Bài 6
+
+
 // Bài 7
 function themMang7() {
     let number_1 = document.getElementById("Array7").value * 1;
@@ -83,8 +86,6 @@ function themMang7() {
     let content1 = `Mảng sau sắp xếp tăng dần: [${array}].`;
     document.getElementById("noti7").innerHTML = `${content}, ${content1}`
 }
-
-
 // Bài 8
 function themMang8() {
     let number_1 = document.getElementById("Array8").value * 1;
@@ -110,6 +111,23 @@ function bai8() {
         }
     }
     document.getElementById("noti8").innerHTML = `Mảng của bạn là: [${array}]. Không có số nguyên tố nào: Kết Quả -1`;
+}
+// Bài 9
+function themMang9() {
+    let number_1 = document.getElementById("Array9").value * 1;
+    array.push(number_1);
+    let content = `Mảng bạn đang có: [${array}].`;
+    document.getElementById("noti9").innerHTML = content;
+}
+function bai9() {
+    let dem = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (Number.isInteger(array[i])) {
+            dem++;
+        }
+    }
+    let content = `Mảng của bạn là: [${array}]. Có ${dem} số nguyên trong mảng.`;
+    document.getElementById("noti9").innerHTML = content;
 }
 
 // Bài 10
